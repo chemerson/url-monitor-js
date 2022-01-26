@@ -1,9 +1,13 @@
 'use strict';
 
-const loadLib = require('/Users/christopheremerson/Projects/url-monitor-js/scripts/lib/lazy-load')
-const resLib = require('/Users/christopheremerson/Projects/url-monitor-js/scripts/lib/display-results')
+//const loadLib = require('/Users/christopheremerson/Projects/url-monitor-js/scripts/lib/lazy-load')
+//const resLib = require('/Users/christopheremerson/Projects/url-monitor-js/scripts/lib/display-results')
+
+const loadLib = require('./lib/lazy-load')
+const resLib = require('./lib/display-results')
  
 const config = require('../url-monitor-config')
+var fs = require('fs');
 
 require('chromedriver'); // eslint-disable-line node/no-unpublished-require
 const { Builder } = require('selenium-webdriver');
@@ -25,13 +29,12 @@ const perf = require('execution-time')();
   await perf.start();
 
     // URLs to test
-    var urls = [
+/*     var urls = [
       'https://www.carfax.com/',
       'https://www.carfax.com/Auto-Repair',
       'https://www.carfax.com/vehicle-history-reports/',
       'https://www.carfax.com/value/'
-    ];
-
+    ]; */
 
   try {
 
@@ -96,6 +99,9 @@ const perf = require('execution-time')();
       .build();
 
     await eyes.open(driver);
+
+    let data = await rFile('urls.txt')
+    let urls = await data.split('\n')
 
     var i;
     for(i=1;i<=urls.length;i++) {
@@ -191,3 +197,4 @@ function rFile(fname) {
     console.error(err)
   }
 }
+
