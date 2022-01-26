@@ -4,8 +4,6 @@ node_js:
   - 10
 dist: xenial
 
-before_script:
-  - sleep 2 # give Web server some time to bind to sockets, etc
 jobs:
   include:
     - stage: Deploying demo server & running tests
@@ -14,6 +12,9 @@ jobs:
 
 before_install:
   - npm install
+  - npm install encoding@^0.1.0
+  - npm install bufferutil@^4.0.1
+  - npm install utf-8-validate@^5.0.2
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost:39500 &
 addons:
   chrome: stable
