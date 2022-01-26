@@ -24,4 +24,4 @@ cache:
    directories:
      - node_modules
 env:
-  - PORT=39500
+  - APPLITOOLS_API_KEY='IVATJb9JJqGfzLDJ6p3eWtU4hUsOO5rAFmciVSi4qtk110'
