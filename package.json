@@ -1,28 +1,21 @@
 {
-  "name": "javascript",
+  "name": "url-monitor-js",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
     "@applitools/eyes-selenium": "^4.58.3",
-    "chai": "^4.3.4",
     "chromedriver": "^97.0.0",
     "execution-time": "^1.4.1",
-    "geckodriver": "^3.0.1",
-    "mocha": "^9.1.4",
     "npm": "^8.3.1",
-    "pryjs": "^1.0.3",
     "selenium-webdriver": "^4.1.1",
     "sleep": "^6.3.0"
   },
   "devDependencies": {
-    "commander": "^8.3.0",
-    "es6-promise-pool": "^2.5.0",
-    "sitemap-generator": "^8.5.1",
-    "sitemap-to-array": "^6.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "url-monitor": "node ./scripts/url-monitor.js"
   },
   "author": "",
   "license": "ISC"

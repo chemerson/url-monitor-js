@@ -1,9 +1,10 @@
 'use strict';
 
-//const loadLib = require('/Users/christopheremerson/Projects/javascript/scripts/lib/lazy-load')
-const loadLib = require('/javascript/scripts/lib/lazy-load')
-const resLib = require('/Users/christopheremerson/Projects/javascript/scripts/lib/display-results')
+const loadLib = require('/Users/christopheremerson/Projects/url-monitor-js/scripts/lib/lazy-load')
+const resLib = require('/Users/christopheremerson/Projects/url-monitor-js/scripts/lib/display-results')
  
+const config = require('../url-monitor-config')
+
 require('chromedriver'); // eslint-disable-line node/no-unpublished-require
 const { Builder } = require('selenium-webdriver');
 const { Eyes, 
