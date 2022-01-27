@@ -28,29 +28,22 @@ const perf = require('execution-time')();
   const startTime = await printTime();
   await perf.start();
 
-    // URLs to test
-/*     var urls = [
-      'https://www.carfax.com/',
-      'https://www.carfax.com/Auto-Repair',
-      'https://www.carfax.com/vehicle-history-reports/',
-      'https://www.carfax.com/value/'
-    ]; */
 
   try {
 
     var eyesConfig = {
       vx: 1024,
       vy: 700,
-      batchName: 'Carfax URLs',
+      batchName: config.batchName,
       apiKey: process.env.APPLITOOLS_API_KEY,
-      appName: 'Carfax UFG app',
-      testName: 'Carfax UFG',
-      log: false,
-      envName: 'Carfax test environment',
-      branchName: 'Demo 996',
+      appName: config.appName,
+      testName: config.testName,
+      log: config.log,
+      envName: config.envName,
+      branchName: config.branchName,
       matchLevel: MatchLevel.Strict,
-      jsLayoutBreakpoints: true,
-      saveFailedTests: false,
+      jsLayoutBreakpoints: config.jsLayoutBreakpoints | false,
+      saveFailedTests: config.saveFailedTests | false,
     }
     const batchInfo = new BatchInfo(eyesConfig.batchName);
     batchInfo.setId(eyesConfig.batchId); 
