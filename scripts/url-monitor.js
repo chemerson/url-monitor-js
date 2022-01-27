@@ -165,13 +165,6 @@ function printTime() {
   return (d + "-" + mm + "-" + yy + " " + h + ":" + m + ":" + s)
 }
 
-            /*
-      await eyes.check(urls[i-1], Target
-        .window()
-        .fully()
-        .layout(By.css('div')));
-      */
-
 async function evalChange(page, change) {
   switch (change) {
     case 1:
