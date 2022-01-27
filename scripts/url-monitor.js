@@ -1,8 +1,5 @@
 'use strict';
 
-//const loadLib = require('/Users/christopheremerson/Projects/url-monitor-js/scripts/lib/lazy-load')
-//const resLib = require('/Users/christopheremerson/Projects/url-monitor-js/scripts/lib/display-results')
-
 const loadLib = require('./lib/lazy-load')
 const resLib = require('./lib/display-results')
  
