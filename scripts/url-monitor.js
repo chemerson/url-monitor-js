@@ -39,8 +39,8 @@ const perf = require('execution-time')();
       envName: config.envName,
       branchName: config.branchName,
       matchLevel: MatchLevel.Strict,
-      jsLayoutBreakpoints: config.jsLayoutBreakpoints | false,
-      saveFailedTests: config.saveFailedTests | false,
+      jsLayoutBreakpoints: config.jsLayoutBreakpoints ? config.jsLayoutBreakpoints : false,
+      saveFailedTests: config.saveFailedTests ? config.saveFailedTests : false,
     }
     const batchInfo = new BatchInfo(eyesConfig.batchName);
     batchInfo.setId(eyesConfig.batchId); 
