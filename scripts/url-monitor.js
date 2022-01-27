@@ -32,7 +32,8 @@ const perf = require('execution-time')();
       vx: 1024,
       vy: 700,
       batchName: config.batchName,
-      apiKey: process.env.APPLITOOLS_API_KEY,
+      batchId: 'urlmonitor' + startTime,
+      apiKey: config.apiKey ? config.apiKey : process.env.APPLITOOLS_API_KEY,
       appName: config.appName,
       testName: config.testName,
       log: config.log,
@@ -61,8 +62,8 @@ const perf = require('execution-time')();
         .setSendDom(true)
         .setViewportSize({width: Number(eyesConfig.vx), height: Number(eyesConfig.vy)})
         .setLayoutBreakpoints(eyesConfig.jsLayoutBreakpoints)
-        .setWaitBeforeScreenshots(500)
-        .setWaitBeforeCapture(1500)
+        .setWaitBeforeScreenshots(1000)
+        .setWaitBeforeCapture(2000)
 
         ;
         
@@ -88,7 +89,7 @@ const perf = require('execution-time')();
       .withCapabilities({browserName: 'chrome'})
       .build();
 
-    await eyes.open(driver);
+    // await eyes.open(driver);
 
     let data = await rFile('urls.txt')
     let urls = await data.split('\n')
@@ -108,7 +109,9 @@ const perf = require('execution-time')();
       await loadLib.lazyLoadPage(driver);
 
       try { 
-          await eyes.check(urls[i-1].toString(), Target.window().fully()); 
+          await eyes.open(driver, config.appName, urls[i-1].toString())
+          await eyes.check(urls[i-1].toString(), Target.window().fully())
+          await eyes.close(false)
         } catch (err) { 
             console.log("eyes.check ERROR: " + err.message);
       }
@@ -116,7 +119,7 @@ const perf = require('execution-time')();
     }
 
     await console.log('Tests complete. Please wait as the grid renders the results...');
-    await eyes.close(false);
+    // await eyes.close(false);
 
     await driver.quit();
     const testResultsSummary = await eyes.getRunner().getAllTestResults(false);

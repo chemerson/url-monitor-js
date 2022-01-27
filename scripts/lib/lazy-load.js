@@ -16,12 +16,15 @@ async function getPageHeight(driver) {
         await driver.executeScript("window.scrollTo(0," + j + ")");
         height =  await driver.executeScript("return window.innerHeight");
         pageHeight = await getPageHeight(driver);
-        //sleep.msleep(1500);
-        setTimeout(() => 0, 1500);
+        await timeout(750)
     }
     await driver.executeScript("window.scrollTo(0, 0);");
+    await timeout(750)
   };
 
+  function timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
   module.exports = {
     getPageHeight,
     lazyLoadPage
