@@ -13,7 +13,7 @@ jobs:
         - uses: actions/setup-node@v2
           with:
             node-version: '16'
-
+        - uses: browser-actions/setup-chrome@latest
         - run: npm install
         - run: npm test
           env:
