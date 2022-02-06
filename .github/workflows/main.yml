@@ -19,3 +19,6 @@ jobs:
 
         - run: npm install
         - run: npm test
+          env:
+            NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+            APPLITOOLS_API_KEY: ${{secrets.APPLITOOLS_API_KEY}}
