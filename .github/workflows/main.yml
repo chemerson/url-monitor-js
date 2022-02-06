@@ -1,15 +1,14 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  run_monitor_job:
     runs-on: ubuntu-latest
     name: url-monitor-is-my-name
-    steps:
-      - name: Hello world action step
-        id: hello
-        uses: chemerson/url-monitor-js@v1.0
-        with:
-          who-to-greet: 'Mona the Octocat'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+
+  steps:
+  - uses: actions/checkout@v2
+  - uses: actions/setup-node@v2
+    with:
+      node-version: '16'
+  - run: npm install
+  - run: npm test
