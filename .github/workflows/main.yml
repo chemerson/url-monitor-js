@@ -14,10 +14,10 @@ jobs:
           with:
             node-version: '16'
         - uses: browser-actions/setup-chrome@latest
-        - run: npm install
+        - run: INCLUDE_CHROMIUM=true npm install
         #/opt/hostedtoolcache/chromium/latest/x64/
         - run: set CHROMIUM_BIN=$(which chrome)
-        - run: set
+       # - run: set
         - run: npm test
           env:
             APPLITOOLS_API_KEY: ${{secrets.APPLITOOLS_API_KEY}}
