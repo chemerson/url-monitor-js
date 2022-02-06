@@ -16,10 +16,11 @@ async function getPageHeight(driver) {
         await driver.executeScript("window.scrollTo(0," + j + ")");
         height =  await driver.executeScript("return window.innerHeight");
         pageHeight = await getPageHeight(driver);
-        await timeout(750)
+        pageHeight = (pageHeight > 15000) ? 15000 : pageHeight
+        await timeout(500)
     }
     await driver.executeScript("window.scrollTo(0, 0);");
-    await timeout(750)
+    await timeout(500)
   };
 
   function timeout(ms) {
