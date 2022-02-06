@@ -6,7 +6,7 @@ const resLib = require('./lib/display-results')
 const config = require('../url-monitor-config')
 var fs = require('fs');
 
-require('chromedriver'); // eslint-disable-line node/no-unpublished-require
+require('chromedriver');
 const { Builder } = require('selenium-webdriver');
 const { Eyes,
   VisualGridRunner,
