@@ -18,6 +18,6 @@ jobs:
         #/opt/hostedtoolcache/chromium/latest/x64/
         - run: set CHROMIUM_BIN=$(which chrome)
         - run: set
-        - run: run test
+        - run: npm test
           env:
             APPLITOOLS_API_KEY: ${{secrets.APPLITOOLS_API_KEY}}
