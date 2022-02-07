@@ -1,20 +1,21 @@
 
 const urlList = [
-    'https://www.carfax.com/',
-    'https://www.carfax.com/Auto-Repair',
-    'https://www.carfax.com/vehicle-history-reports/',
-    'https://www.carfax.com/value/'
+    'https://www.wikipedia.com/',
+    'https://www.wikinews.org/',
+    'https://www.wikiquote.org/'
 ]
 
 const breakPoints = [1080, 896, 640, 530]
 
+const orgName = 'Company 123'
+
 module.exports = {
-    batchName: 'Carfax URLs',
+    batchName: orgName + ' URLs',
     apiKey: process.env.APPLITOOLS_API_KEY,
-    appName: 'Carfax UFG app',
-    testName: 'Carfax UFG',
+    appName: orgName + ' UFG app',
+    testName: orgName + ' UFG',
     log: false,
-    envName: 'Carfax test environment',
+    envName: orgName + ' test environment',
     branchName: 'Demo 994',
     jsLayoutBreakpoints: true,
     saveFailedTests: false,
