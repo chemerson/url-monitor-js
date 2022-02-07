@@ -6,6 +6,7 @@ const resLib = require('./lib/display-results')
 const config = require('../url-monitor-config')
 var fs = require('fs');
 
+const chrome = require('selenium-webdriver/chrome');
 require('chromedriver');
 const { Builder } = require('selenium-webdriver');
 const { Eyes,
@@ -84,8 +85,15 @@ const perf = require('execution-time')();
       eyes.setLogHandler(new FileLogHandler(true, logfileName, false));
     }
 
+    // /opt/hostedtoolcache/chromium/latest/x64/
+    const screen = {
+      width: 1080,
+      height: 600
+    };
     var driver = new Builder()
-      .withCapabilities({ browserName: 'chrome' })
+      //.forBrowser('chrome')
+      .setChromeOptions(new chrome.Options().headless().windowSize(screen))
+      .withCapabilities({ browserName: 'chrome' , headless: true})
       .build();
 
     const urls = config.urls

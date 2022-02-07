@@ -13,7 +13,7 @@ module.exports = {
     apiKey: process.env.APPLITOOLS_API_KEY,
     appName: 'Carfax UFG app',
     testName: 'Carfax UFG',
-    log: true,
+    log: false,
     envName: 'Carfax test environment',
     branchName: 'Demo 995',
     jsLayoutBreakpoints: true,
