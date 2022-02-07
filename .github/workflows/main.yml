@@ -8,10 +8,12 @@ on:
 jobs:
     run-monitor-job:
       runs-on: ubuntu-latest
-      name: url-monitor-is-my-name
+      name: Carfax-url-monitor-is-my-name
 
       steps:
         - uses: actions/checkout@v2
+          with:
+            ref: Carfax
         - uses: actions/setup-node@v2
           with:
             node-version: '16'
