@@ -1,12 +1,16 @@
 
 const urlList = [
-    'https://www.carfax.com/',
     'https://www.carfax.com/Auto-Repair',
+    'https://www.carfax.com/',
     'https://www.carfax.com/vehicle-history-reports/',
     'https://www.carfax.com/value/'
 ]
 
 const breakPoints = [1080, 896, 640, 530]
+
+const seleniumCommands = [
+    'scripts/helpers/preparePage.js'
+]
 
 module.exports = {
     batchName: 'Carfax URLs',
@@ -19,6 +23,7 @@ module.exports = {
     jsLayoutBreakpoints: true,
     saveFailedTests: false,
     urls: urlList,
+    seleniumCommands: seleniumCommands,
     breakPoints: breakPoints,
     localViewportX: 1080,
     localViewportY: 600

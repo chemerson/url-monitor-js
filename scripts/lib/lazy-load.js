@@ -26,6 +26,7 @@ async function getPageHeight(driver) {
   function timeout(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
+  
   module.exports = {
     getPageHeight,
     lazyLoadPage
