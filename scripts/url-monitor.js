@@ -79,17 +79,17 @@ const perf = require('execution-time')();
     const eyes = new Eyes(new VisualGridRunner(100));
     eyes.setConfiguration(configuration);
 
-    // if(eyesConfig.log) eyes.setLogHandler(new ConsoleLogHandler(true));
-    if (eyesConfig.log) {
+     if(eyesConfig.log) eyes.setLogHandler(new ConsoleLogHandler(true));
+    /* if (eyesConfig.log) {
       let logfileName = 'eyes-' + startTime + '.log';
       eyes.setLogHandler(new FileLogHandler(true, logfileName, false));
-    }
+    } */
 
-    // /opt/hostedtoolcache/chromium/latest/x64/
     const screen = {
       width: 1080,
       height: 600
     };
+    // Run headed with xvfb added to CI workflow
     var driver = new Builder()
       //.forBrowser('chrome')
       .setChromeOptions(new chrome.Options().headless().windowSize(screen))
