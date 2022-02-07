@@ -15,7 +15,7 @@ module.exports = {
     testName: 'Carfax UFG',
     log: false,
     envName: 'Carfax test environment',
-    branchName: 'Demo 995',
+    branchName: 'Demo 994',
     jsLayoutBreakpoints: true,
     saveFailedTests: false,
     urls: urlList,
