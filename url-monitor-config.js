@@ -22,7 +22,8 @@ module.exports = {
     urls: urlList,
     breakPoints: breakPoints,
     localViewportX: 1080,
-    localViewportY: 600
+    localViewportY: 600,
+    disableBrowserFetching: false
 }
 
 

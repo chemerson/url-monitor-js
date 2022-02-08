@@ -69,6 +69,7 @@ const perf = require("execution-time")();
         height: Number(eyesConfig.vy),
       })
       .setLayoutBreakpoints(eyesConfig.jsLayoutBreakpoints)
+      .setDisableBrowserFetching(config.disableBrowserFetching)
       .setWaitBeforeScreenshots(1000)
       .setWaitBeforeCapture(2000);
 
