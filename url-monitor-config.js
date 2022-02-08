@@ -19,7 +19,6 @@ module.exports = {
     jsLayoutBreakpoints: true,
     saveFailedTests: false,
     urls: urlList,
-    seleniumCommands: seleniumCommands,
     breakPoints: breakPoints,
     localViewportX: 1080,
     localViewportY: 600
