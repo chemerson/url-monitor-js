@@ -19,6 +19,7 @@ module.exports = {
     jsLayoutBreakpoints: true,
     saveFailedTests: false,
     urls: urlList,
+    disableBrowserFetching: false,
     breakPoints: breakPoints,
     localViewportX: 1080,
     localViewportY: 600
