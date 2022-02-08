@@ -8,10 +8,6 @@ const urlList = [
 
 const breakPoints = [1080, 896, 640, 530]
 
-const seleniumCommands = [
-    'scripts/helpers/preparePage.js'
-]
-
 module.exports = {
     batchName: 'Carfax URLs',
     apiKey: process.env.APPLITOOLS_API_KEY,

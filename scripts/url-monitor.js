@@ -47,6 +47,7 @@ const perf = require("execution-time")();
     };
     const batchInfo = new BatchInfo(eyesConfig.batchName);
     batchInfo.setId(eyesConfig.batchId);
+    batchInfo.setSequenceName(config.testName + " Batch Progress");
 
     const configuration = new Configuration();
     configuration
@@ -139,6 +140,8 @@ const perf = require("execution-time")();
         await timeout(1000);
       }
 
+      await evalChange(driver, 0);
+
       try {
         await eyes.open(driver, config.appName, urls[i - 1].toString());
         await eyes.check(urls[i - 1].toString(), Target.window().fully());
@@ -194,13 +197,26 @@ function printTime() {
 }
 
 async function evalChange(driver, change) {
+  const path = 'scripts/changers/'
   switch (change) {
     case 1:
-      await driver.executeScript(rFile("test/changers/aligncenter.js"));
-      break;
+      await driver.executeScript(rFile(path + 'align-center.js'))
+      break
     case 2:
-      await driver.executeScript(rFile("test/changers/replaceValue.js"));
-      break;
+      await driver.executeScript(rFile(path + 'change-bg-color.js'))
+      break
+    case 3:
+      await driver.executeScript(rFile(path + 'change-margin.js'))
+      break
+    case 4:
+      await driver.executeScript(rFile(path + 'remove-element.js'))
+      break
+    case 5:
+      await driver.executeScript(rFile(path + 'replace-value.js'))
+      break
+    case 6:
+      await driver.executeScript(rFile(path + 'skew-page.js'))
+      break
     default:
   }
 }
