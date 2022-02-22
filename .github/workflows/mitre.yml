@@ -8,12 +8,12 @@ on:
 jobs:
   run-monitor-job:
     runs-on: ubuntu-latest
-    name: Equifax-url-monitor
+    name: MITRE-url-monitor
 
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: equifax
+          ref: Mitre
       - uses: actions/setup-node@v2
         with:
           node-version: "16"
