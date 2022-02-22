@@ -70,8 +70,8 @@ const perf = require("execution-time")();
       })
       .setLayoutBreakpoints(eyesConfig.jsLayoutBreakpoints)
       .setDisableBrowserFetching(config.disableBrowserFetching)
-      .setWaitBeforeScreenshots(1000)
-      .setWaitBeforeCapture(2000);
+      .setWaitBeforeScreenshots(5000)
+      .setWaitBeforeCapture(5000);
 
     const bps = config.breakPoints;
     bps.forEach((bp) => {
@@ -97,7 +97,7 @@ const perf = require("execution-time")();
     // Run headed with xvfb added to CI workflow
     var driver = new Builder()
       //.forBrowser('chrome')
-      .setChromeOptions(new chrome.Options().headless().windowSize(screen))
+     // .setChromeOptions(new chrome.Options().headless().windowSize(screen))
       .withCapabilities({ browserName: "chrome", headless: true })
       .build();
 
