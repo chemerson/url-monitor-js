@@ -1,13 +1,13 @@
 
 const urlList = [
-   // 'https://www.wikipedia.com/',
-   // 'https://www.wikinews.org/',
-    'https://www.wikiquote.org/'
+    'https://www.equifax.com/',
+    'https://www.equifax.com/personal/products/credit/monitoring-product-comparison/',
+    'https://my.equifax.com/membercenter/#/login'
 ]
 
-const breakPoints = [1080, 896, 640, 530]
+const breakPoints = [1080, 1024, 768, 576]
 
-const orgName = 'Wikipedia'
+const orgName = 'Equifax'
 
 module.exports = {
     batchName: orgName + ' URLs',
@@ -16,7 +16,7 @@ module.exports = {
     testName: orgName + ' UFG',
     log: false,
     envName: orgName + ' test environment',
-    branchName: 'Demo 993',
+    branchName: 'Demo 888',
     jsLayoutBreakpoints: true,
     saveFailedTests: false,
     urls: urlList,
