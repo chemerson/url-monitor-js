@@ -1,13 +1,13 @@
 
 const urlList = [
-   // 'https://www.wikipedia.com/',
-   // 'https://www.wikinews.org/',
-    'https://www.wikiquote.org/'
+    'https://www.mitre.org/',
+    'https://www.mitre.org/centers/we-operate-ffrdcs',
+    'https://www.mitre.org/research/overview/whats-new'
 ]
 
-const breakPoints = [1080, 896, 640, 530]
+const breakPoints = [1200, 1050, 769, 680]
 
-const orgName = 'Wikipedia'
+const orgName = 'MITRE'
 
 module.exports = {
     batchName: orgName + ' URLs',
@@ -16,7 +16,7 @@ module.exports = {
     testName: orgName + ' UFG',
     log: false,
     envName: orgName + ' test environment',
-    branchName: 'Demo 993',
+    branchName: 'Demo ' + orgName + ' 999',
     jsLayoutBreakpoints: true,
     saveFailedTests: false,
     urls: urlList,
