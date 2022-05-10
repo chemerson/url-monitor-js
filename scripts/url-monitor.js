@@ -33,7 +33,7 @@ const perf = require("execution-time")();
       vx: config.localViewportX,
       vy: config.localViewportY,
       batchName: config.batchName,
-      batchId: "urlmonitor" + startTime,
+      batchId: "urlmonitor " + startTime,
       apiKey: config.apiKey ? config.apiKey : process.env.APPLITOOLS_API_KEY,
       appName: config.appName,
       testName: config.testName,
@@ -97,8 +97,8 @@ const perf = require("execution-time")();
     // Run headed with xvfb added to CI workflow
     var driver = new Builder()
       //.forBrowser('chrome')
-      .setChromeOptions(new chrome.Options().headless().windowSize(screen))
-      .withCapabilities({ browserName: "chrome", headless: true })
+      //.setChromeOptions(new chrome.Options().headless().windowSize(screen))
+      .withCapabilities({ browserName: "chrome", headless: false })
       .build();
 
     const urls = config.urls;
