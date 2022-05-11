@@ -1,11 +1,13 @@
 
 const urlList = [
-    'https://www.huggies.com/en-us/'
+    'https://www.huggies.com/en-us/',
+    'https://www.depend.com/en-us',
+    'https://www.cottonelle.com/en-us/'
 ]
 
-const breakPoints = [1080, 896, 640, 530]
+const breakPoints = [1300, 1023, 640, 400]
 
-const orgName = 'Huggies (Kimberly-Clark)'
+const orgName = 'Kimberly-Clark'
 
 module.exports = {
     batchName: orgName + ' URLs',
