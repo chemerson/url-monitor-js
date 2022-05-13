@@ -70,7 +70,7 @@ const perf = require("execution-time")();
       })
       .setLayoutBreakpoints(eyesConfig.jsLayoutBreakpoints)
       .setDisableBrowserFetching(config.disableBrowserFetching)
-      .setWaitBeforeScreenshots(1000)
+      .setWaitBeforeScreenshots(1500)
       .setWaitBeforeCapture(2000);
 
     const bps = config.breakPoints;
