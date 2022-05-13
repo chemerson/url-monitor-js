@@ -2,7 +2,11 @@
 const urlList = [
     'https://www.huggies.com/en-us/',
     'https://www.depend.com/en-us',
-    'https://www.cottonelle.com/en-us/'
+    'https://www.depend.com/en-us/find-a-store',
+    'https://www.cottonelle.com/en-us/',
+    'https://www.kimberly-clark.com/en-us/terms-and-conditions-en-us',
+    'https://www.kimberly-clark.com/en-us/privacypolicy',
+    'https://www.kimberly-clark.com/en-us/yourrightsandchoices'
 ]
 
 const breakPoints = [1300, 1023, 640, 400]
