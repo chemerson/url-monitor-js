@@ -97,8 +97,8 @@ const perf = require("execution-time")();
     // Run headed with xvfb added to CI workflow
     var driver = new Builder()
       //.forBrowser('chrome')
-      .setChromeOptions(new chrome.Options().headless().windowSize(screen))
-      .withCapabilities({ browserName: "chrome", headless: true })
+      //.setChromeOptions(new chrome.Options().headless().windowSize(screen))
+      .withCapabilities({ browserName: "chrome", headless: false })
       .build();
 
     const urls = config.urls;
