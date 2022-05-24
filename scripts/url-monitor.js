@@ -112,15 +112,17 @@ const perf = require("execution-time")();
         );
       });
 
-      // use this to clear warnings etc
-      //try{await driver.findElement(By.css('body > ')).click();} catch {}
-
+ 
       await loadLib.lazyLoadPage(driver);
 
       await evalChange(driver, 0);
 
       try {
         await eyes.open(driver, config.appName, urls[i - 1].toString());
+        
+        // use this to clear warnings etc
+        try{await driver.findElement(By.css('#sweepstakeModal > div > div > div.ss-popup-imagepart > i')).click();} catch {}
+
         await eyes.check(urls[i - 1].toString(), Target.window().fully());
         await eyes.close(false);
       } catch (err) {
