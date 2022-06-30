@@ -5,7 +5,7 @@
   "main": "",
   "dependencies": {
     "@applitools/eyes-selenium": "^4.58.3",
-    "chromedriver": "^101.0.0",
+    "chromedriver": "^102.0.0",
     "encoding": "^0.1.13",
     "execution-time": "^1.4.1",
     "npm": "^8.3.1",
