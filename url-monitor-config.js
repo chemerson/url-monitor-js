@@ -1,13 +1,11 @@
 
 const urlList = [
-   // 'https://www.wikipedia.com/',
-   // 'https://www.wikinews.org/',
-    'https://www.wikiquote.org/'
+   'https://www.dell.com'
 ]
 
 const breakPoints = [1080, 896, 640, 530]
 
-const orgName = 'Wikipedia'
+const orgName = 'Dell'
 
 module.exports = {
     batchName: orgName + ' URLs',
