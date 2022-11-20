@@ -8,12 +8,12 @@ on:
 jobs:
   run-monitor-job:
     runs-on: ubuntu-latest
-    name: MITRE-url-monitor
+    name: DELL-url-monitor
 
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: Mitre
+          ref: Dell
       - uses: actions/setup-node@v2
         with:
           node-version: "16"
@@ -24,4 +24,4 @@ jobs:
           export DISPLAY=:99
           chromedrive & sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & npm test
         env:
-          APPLITOOLS_API_KEY: ${{secrets.APPLITOOLS_API_KEY_DEMO_2}}
+          APPLITOOLS_API_KEY: ${{secrets.APPLITOOLS_API_KEY_URL_MONITOR}}
