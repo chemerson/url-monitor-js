@@ -8,7 +8,6 @@ var fs = require("fs");
 
 const chrome = require("selenium-webdriver/chrome");
 require("chromedriver");
-const { Builder } = require("selenium-webdriver");
 const {Builder, By} = require('selenium-webdriver');
 const {
   Eyes,
