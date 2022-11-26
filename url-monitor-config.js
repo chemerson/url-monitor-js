@@ -2,7 +2,7 @@
 const urlList = [
    'https://www.dell.com',
    'https://www.dell.com/en-us/shop/desktop-computers/sc/desktops',
-   'https://www.dell.com/en-us/shop/deals/business-desktop-deals
+   'https://www.dell.com/en-us/shop/deals/business-desktop-deals'
 ]
 
 const breakPoints = [1080, 896, 640, 530]
