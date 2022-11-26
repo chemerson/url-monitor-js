@@ -121,7 +121,7 @@ const perf = require("execution-time")();
 
       try {
         await eyes.open(driver, config.appName, urls[i - 1].toString());
-        await eyes.check(urls[i - 1].toString(), Target.window().fully());
+        await eyes.check(urls[i - 1].toString(), Target.window().fully().layout(By.css('#message-bar > div > div > div > div > div.cf-sw-inner-container.cf-mb-left-align > div.cf-sw-countdown-wrap'));
         await eyes.close(false);
       } catch (err) {
         console.log("eyes.check ERROR: " + err.message);
