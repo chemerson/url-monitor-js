@@ -23,7 +23,7 @@ module.exports = {
     breakPoints: breakPoints,
     localViewportX: 1080,
     localViewportY: 600,
-    disableBrowserFetching: false
+    disableBrowserFetching: true
 }
 
 
