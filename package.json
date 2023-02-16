@@ -12,7 +12,8 @@
     "selenium-webdriver": "^4.8.0"
   },
   "scripts": {
-    "test": "node ./scripts/url-monitor.js"
+    "test": "node ./scripts/url-monitor.js",
+    "azure": "node ./scripts/azure-url-monitor.js"
   },
   "author": "",
   "license": "ISC"
