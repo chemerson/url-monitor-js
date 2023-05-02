@@ -94,13 +94,22 @@ const perf = require("execution-time")();
       width: 1080,
       height: 600,
     };
+    
+  await executionCloudUrl = Eyes.getExecutionCloudUrl()
+  const driver = await new Builder()
+	.withCapabilities({
+	  browserName: 'chrome',
+	})
+	.usingServer(executionCloudUrl)
+	.build()
+/*
     // Run headed with xvfb added to CI workflow
     var driver = new Builder()
       //.forBrowser('chrome')
       .setChromeOptions(new chrome.Options().headless().windowSize(screen))
       .withCapabilities({ browserName: "chrome", headless: true })
       .build();
-
+*/
     const urls = config.urls;
     var i;
     for (i = 1; i <= urls.length; i++) {
