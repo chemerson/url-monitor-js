@@ -4,12 +4,12 @@
   "description": "",
   "main": "",
   "dependencies": {
-    "@applitools/eyes-selenium": "^4.63.1",
+    "@applitools/eyes-selenium": "^4.65.5",
     "chromedriver": "^112.0.0",
     "encoding": "^0.1.13",
     "execution-time": "^1.4.1",
-    "npm": "^9.5.0",
-    "selenium-webdriver": "^4.8.0"
+    "npm": "^9.6.5",
+    "selenium-webdriver": "^4.9.0"
   },
   "scripts": {
     "test": "node ./scripts/url-monitor.js",
