@@ -11,7 +11,7 @@ jobs:
     name: Self-healing
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           ref: self-healing
       - uses: actions/setup-node@v2
