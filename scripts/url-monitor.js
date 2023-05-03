@@ -18,7 +18,7 @@ const {
   Configuration,
   BrowserType,
   BatchInfo,
-  MatchLevel,
+  MatchLevel
 } = require("@applitools/eyes-selenium");
 
 const perf = require("execution-time")();
@@ -89,7 +89,7 @@ const perf = require("execution-time")();
       height: 600,
     };
 
-    await executionCloudUrl = Eyes.getExecutionCloudUrl()
+    let executionCloudUrl = await Eyes.getExecutionCloudUrl()
     const driver = await new Builder()
       .withCapabilities({
         browserName: 'chrome',
