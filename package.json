@@ -4,16 +4,18 @@
   "description": "",
   "main": "",
   "dependencies": {
-    "@applitools/eyes-selenium": "^4.65.5",
+    "@applitools/eyes-selenium": "^4.65.6",
     "chromedriver": "^112.0.0",
     "encoding": "^0.1.13",
     "execution-time": "^1.4.1",
-    "npm": "^9.6.5",
+    "npm": "^9.6.6",
     "selenium-webdriver": "^4.9.0"
   },
   "scripts": {
-    "test": "node ./scripts/url-monitor.js",
-    "azure": "node ./scripts/azure-url-monitor.js"
+    "test": "node ./scripts/login.js",
+    "azure": "node ./scripts/azure-url-monitor.js",
+    "familysearch": "node ./scripts/familysearch.js",
+    "loginbank": "node ./scripts/loginbank.js"
   },
   "author": "",
   "license": "ISC"
